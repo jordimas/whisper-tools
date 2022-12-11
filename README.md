@@ -5,6 +5,8 @@ OpenAI whisper simple tool to transcribe files using HuggingFace libraries
 
 ``pip install -r requirements``
 
+You need also ffmpeg installed.
+
 # Usage
 
 To see all options:
