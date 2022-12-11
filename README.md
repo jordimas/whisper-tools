@@ -3,7 +3,7 @@ OpenAI whisper simple tool to transcribe files using HuggingFace libraries
 
 # Install
 
-pip install -r requirements
+``pip install -r requirements``
 
 # Usage
 
