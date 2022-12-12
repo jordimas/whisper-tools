@@ -1,6 +1,7 @@
 import argparse
 import torch
 from transformers import pipeline
+import datetime
 
 
 def transcribe(filename, model_id, language):
@@ -24,7 +25,6 @@ def transcribe(filename, model_id, language):
 
 
 def read_parameters():
-
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
@@ -50,7 +50,9 @@ def read_parameters():
     return args.filename, args.model_id, args.language
 
 if __name__ == "__main__":
+    start_time = datetime.datetime.now()
     filename, model_id, language = read_parameters()
     transcribe(filename, model_id, language)
-    
+    s = 'Time used: {0}'.format(datetime.datetime.now() - start_time)
+    print(s)
 
